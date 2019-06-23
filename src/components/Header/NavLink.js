@@ -8,7 +8,7 @@ const LinkNav = styled(Link)`
   transition: color 0.2s ease-out;
   text-decoration: none;
   :hover {
-    color: #7fa1e8;
+    color: goldenrod;
     transition: color 0.2s;
   }
   &.active {
@@ -16,9 +16,6 @@ const LinkNav = styled(Link)`
   }
   @media (max-width: 700px) {
     margin-right: 14px;
-    :last-of-type {
-      display: flex;
-    }
   }
 `
 const NavLink = ({ info }) => (

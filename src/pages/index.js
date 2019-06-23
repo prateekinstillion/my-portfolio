@@ -15,7 +15,9 @@ const IndexPage = () => {
     <Layout>
       <MainWrapper>
         <MainTitle>
-          Prateek <span>Madaan</span>
+          <h1 className="text-focus-in">
+            Prateek <span>Madaan</span>
+          </h1>
         </MainTitle>
         <MainDescription>
           <div>

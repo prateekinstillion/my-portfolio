@@ -10,6 +10,7 @@ import { Location } from "@reach/router"
 
 import "../layouts/index.css"
 import Header from "./Header/header"
+import Footer from "./Footer/footer"
 
 const Wrapper = styled.div`
   background-image: url(${backgroundWrapper});
@@ -60,6 +61,13 @@ const Layout = ({ children }) => (
               >
                 <Header />
                 {children}
+                <Footer
+                  footerClass={
+                    location.pathname === "/"
+                      ? "initial-footer"
+                      : "absolute-footer"
+                  }
+                />
               </Wrapper>
             )
           }}

@@ -9,14 +9,47 @@ export const MainWrapper = styled.div`
 `
 
 export const MainTitle = styled.h1`
-  font-size: 4.2em;
+  letter-spacing: 2px;
   font-weight: bold;
   color: #ffffff;
+  .text-focus-in {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      both;
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  h1 {
+    font-size: 2em;
+  }
   span {
     color: #7fa1e8;
   }
+  @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 700px) {
-    font-size: 3em;
+    font-size: 1.8em;
   }
 `
 
