@@ -1,21 +1,42 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import AboutCard from "../components/About/AboutCard"
+import aboutData from "../portfolioData/aboutData"
+import {
+  MainWrapper,
+  MainTitle,
+  MainDescription,
+  // ResumeDownloadBtn,
+  MainTopic,
+} from "../styles/mainStyles.js"
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <MainWrapper>
+        <MainTitle>
+          Prateek <span>Madaan</span>
+        </MainTitle>
+        <MainDescription>
+          <div>
+            <p>
+              Hello there, welcome to my portfolio.I am a full stack web
+              developer, blockchain enthusiast and a traveller who loves to code
+              and experiment with things.
+            </p>
+            {/* Add the resume download button if required
+            No need to add one since your portfolio is your resume
+            PLACEHOLDER TO ADD THE RESUME BUTTON [DO IF NEEDED] */}
+          </div>
+        </MainDescription>
+        <MainTopic>
+          {aboutData.map(item => (
+            <AboutCard key={item.id} information={item} />
+          ))}
+        </MainTopic>
+      </MainWrapper>
+    </Layout>
+  )
+}
 
 export default IndexPage
