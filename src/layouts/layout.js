@@ -8,9 +8,9 @@ import favicon from "../assets/images/prateek.jpg"
 import backgroundWrapper from "../assets/images/background.jpg"
 import { Location } from "@reach/router"
 
-import "../layouts/index.css"
-import Header from "./Header/header"
-import Footer from "./Footer/footer"
+import "./index.css"
+import Header from "../components/Header/header"
+import Footer from "../components/Footer/footer"
 
 const Wrapper = styled.div`
   background-image: url(${backgroundWrapper});

@@ -18,9 +18,9 @@ const LinkNav = styled(Link)`
     margin-right: 14px;
   }
 `
-const NavLink = ({ info }) => (
-  <LinkNav to={info.path} exact={"true"} activeClassName="active">
-    {info.label}
+const NavLink = ({ info: { path, label } }) => (
+  <LinkNav to={path} exact={"true"} activeClassName="active">
+    <span>{label}</span>
   </LinkNav>
 )
 

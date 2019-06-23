@@ -8,12 +8,14 @@ import {
   ContactDetails,
   ContactBox,
 } from "../styles/contactStyles.js"
-import Layout from "../components/layout"
+import Layout from "../layouts/layout"
 
 const Contact = () => (
   <Layout>
     <ContactWrapper>
-      <ContactHeader>Get in touch</ContactHeader>
+      <ContactHeader>
+        <h1 className="text-focus-in">Get in touch</h1>
+      </ContactHeader>
       <ContactDetails>
         <ContactBox>
           <h3>Contact Details</h3>

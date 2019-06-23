@@ -8,7 +8,7 @@ import {
   // ResumeDownloadBtn,
   MainTopic,
 } from "../styles/mainStyles.js"
-import Layout from "../components/layout"
+import Layout from "../layouts/layout"
 
 const IndexPage = () => {
   return (
@@ -21,7 +21,7 @@ const IndexPage = () => {
         </MainTitle>
         <MainDescription>
           <div>
-            <p>
+            <p className="bounce-top">
               Hello there, welcome to my portfolio.I am a full stack web
               developer, blockchain enthusiast and a traveller who loves to code
               and experiment with things.

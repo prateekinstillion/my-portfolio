@@ -43,17 +43,17 @@ const ContactSection = styled.div`
     }
   }
 `
-const SocialContact = ({ info }) => (
+const SocialContact = ({ info: { linkTo, path, icon, title } }) => (
   <ContactWrapper>
-    {info.linkTo ? (
-      <ContactLink href={info.path}>
-        <img src={info.icon} alt="contact link prateek" />
-        <p>{info.title}</p>
+    {linkTo ? (
+      <ContactLink href={path}>
+        <img src={icon} alt="contact link prateek" />
+        <p>{title}</p>
       </ContactLink>
     ) : (
       <ContactSection>
-        <img src={info.icon} alt="contact link prateek" />
-        <p>{info.title}</p>
+        <img src={icon} alt="contact link prateek" />
+        <p>{title}</p>
       </ContactSection>
     )}
   </ContactWrapper>
