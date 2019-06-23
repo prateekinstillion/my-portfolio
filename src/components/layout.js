@@ -1,49 +1,73 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import { siteMeta } from "../portfolioData/seoData"
+import Helmet from "react-helmet"
+import favicon from "../assets/images/prateek.jpg"
+import backgroundWrapper from "../assets/images/background.jpg"
+import { Location } from "@reach/router"
 
-import Header from "./header"
-import "./layout.css"
+import "../layouts/index.css"
+import Header from "./Header/header"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+const Wrapper = styled.div`
+  background-image: url(${backgroundWrapper});
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: auto;
+  background-position: bottom;
+  padding: 5% 8%;
+  position: relative;
+  @media (max-width: 700px) {
+    min-height: 100vh;
+    height: auto;
+  }
+`
+
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
         }
       }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
+    `}
+    render={data => (
+      <Fragment>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: "description", content: siteMeta.description },
+            { name: "keywords", content: siteMeta.keywords.join(", ") },
+            { name: "author", content: siteMeta.author },
+            { name: "copyright", content: siteMeta.copyright },
+          ]}
+          link={[
+            { rel: "shortcut icon", type: "image/png", href: `${favicon}` },
+          ]}
+        />
+        <Location>
+          {({ location }) => {
+            return (
+              <Wrapper
+                className={location.pathname === "/" ? "cutBackground" : ""}
+              >
+                <Header />
+                {children}
+              </Wrapper>
+            )
+          }}
+        </Location>
+      </Fragment>
+    )}
+  />
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
