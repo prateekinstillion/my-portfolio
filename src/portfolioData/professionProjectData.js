@@ -1,19 +1,41 @@
-import like from "../assets/images/projects/social.svg"
 
 export default [
   {
     id: 1,
-    title: "E-learning Platform for Datum Guy",
-    icon: like,
-    description: `It is an e-learning platform for flagship programme of Machine Learning by Datum Guy 
-        for students who want to learn Machine Learning, platform provides courses options from various instructors and 
-        to manage batches of students, tracking their progress and allowing students to learn by watching videos. 
-        This project is still under active development and hence is not live. I learnt a lot while working with them 
-        on how to manage deadlines and deliver the product as per expectations.`,
+    title: "Lorem Ipsum",
+    icon: null,
+    description:
+      `Lorem Ipsum is simply dummy text of the printing and typesetting 
+      industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+      1500s, when an unknown printer took a galley of type and scrambled it to make 
+      a type specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised 
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+      and more recently with desktop publishing software like Aldus PageMaker including 
+      versions of Lorem Ipsum.`,
     githubPath: null,
     demoPath: null,
     year: "2018",
     techUsed:
       "Angular 6, CodeIgniter Php Framework, Bootstrap, Tachyons, HTML5, CSS3",
+  },
+  {
+    id: 2,
+    title: "Lorem Ipsum",
+    icon: null,
+    description:
+      `Lorem Ipsum is simply dummy text of the printing and typesetting 
+      industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
+      1500s, when an unknown printer took a galley of type and scrambled it to make 
+      a type specimen book. It has survived not only five centuries, but also the leap
+      into electronic typesetting, remaining essentially unchanged. It was popularised 
+      in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+      and more recently with desktop publishing software like Aldus PageMaker including 
+      versions of Lorem Ipsum.`,
+    githubPath: null,
+    demoPath: null,
+    year: "2018",
+    techUsed:
+      "MEAN Stack",
   },
 ]
