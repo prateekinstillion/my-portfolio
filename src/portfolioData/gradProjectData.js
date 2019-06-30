@@ -1,5 +1,5 @@
 /**
- * @desc gradProjectData here the data pertaining to the graduation projects will go 
+ * @desc gradProjectData here the data pertaining to the graduation projects will go
  * #######################################################################
  * #######################################################################
  * ########## REMOVE THE DATA IF NOT REQUIRED ############################
@@ -10,7 +10,7 @@
 export default [
   {
     id: 1,
-    title: "Drowsiness Detection System",
+    title: "Lorem Ipsum",
     icon: null,
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting 
     industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
@@ -27,7 +27,7 @@ export default [
   },
   {
     id: 2,
-    title: "Invester Suggestion Portal : Multichain Based Solution Approach",
+    title: "Lorem Ipsum",
     icon: null,
     description: `Lorem Ipsum is simply dummy text of the printing and typesetting 
     industry. Lorem Ipsum has been the industry's standard dummy text ever since the 
