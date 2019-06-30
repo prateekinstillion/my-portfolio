@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 export const ExperienceWrapper = styled.div`
   align-items: flex-start;
@@ -12,19 +12,49 @@ export const ExperienceWrapper = styled.div`
 export const WorkWrapper = styled.div`
   flex: 2;
   margin-right: 8%;
-  h1{
+  h1 {
     font-weight: 300;
     padding-bottom: 35px;
     margin-bottom: 35px;
     border-bottom: solid 1px #ffffff;
   }
+  .fade-in-left {
+    -webkit-animation: fade-in-left 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-left 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+
+  @-webkit-keyframes fade-in-left {
+    0% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-left {
+    0% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 700px) {
     margin-right: 0;
   }
 `
 export const EducationWrapper = styled.div`
-  flex:1;
-  h1{
+  flex: 1;
+  h1 {
     font-weight: 300;
     padding-bottom: 35px;
     margin-bottom: 35px;
@@ -52,11 +82,11 @@ export const StepperHead = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  h3{
+  h3 {
     margin: 2px;
     font-weight: 300;
   }
-  a{
+  a {
     font-size: 23px;
     font-weight: 300;
     color: #eeeeee;
@@ -69,19 +99,19 @@ export const StepperHead = styled.div`
 `
 export const LogoLink = styled.a`
   display: block;
-  img{
+  img {
     padding: 2%;
     display: flex;
   }
 `
 export const StepperDescription = styled.div`
   max-width: 80%;
-  p{
+  p {
     font-size: 16px;
     font-weight: 300;
     margin: 5px;
   }
-  li{
+  li {
     font-size: 16px;
     font-weight: 300;
     margin: 5px;
