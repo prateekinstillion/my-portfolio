@@ -617,10 +617,8 @@ p {
   font-family: "Righteous", sans-serif;
 }
 .Wrapper {
-  background-image: url("../assets/images/background2.jpg");
+  background-image: url("../assets/images/background2.jpg") no-repeat center center/cover;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 100vh;
   height: auto;
   background-position: bottom;
