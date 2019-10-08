@@ -14,7 +14,7 @@ import {
   LogoLink,
   StepperDescription,
 } from "../styles/workStyles"
-import { MainWrapper } from '../styles/mainStyles"
+import { MainWrapper } from "../styles/mainStyles"
 import Layout from "../layouts/layout"
 
 const Experience = () => (
