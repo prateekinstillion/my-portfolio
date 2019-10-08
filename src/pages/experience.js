@@ -7,7 +7,6 @@ import interests from "../portfolioData/interestData"
 import {
   ExperienceWrapper,
   WorkWrapper,
-  MainWrapper,
   EducationWrapper,
   EducationContent,
   Stepper,
@@ -15,6 +14,7 @@ import {
   LogoLink,
   StepperDescription,
 } from "../styles/workStyles"
+import { MainWrapper } from '../styles/mainStyles"
 import Layout from "../layouts/layout"
 
 const Experience = () => (
