@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { siteMeta } from "../portfolioData/seoData"
 import Helmet from "react-helmet"
 import favicon from "../assets/images/prateek.jpg"
-import backgroundWrapper from "../assets/images/background.jpg"
+import backgroundWrapper from "../assets/images/background2.jpg"
 import { Location } from "@reach/router"
 
 import "./index.css"
