@@ -7,6 +7,7 @@ import interests from "../portfolioData/interestData"
 import {
   ExperienceWrapper,
   WorkWrapper,
+  MainWrapper
   EducationWrapper,
   EducationContent,
   Stepper,
@@ -18,6 +19,7 @@ import Layout from "../layouts/layout"
 
 const Experience = () => (
   <Layout>
+  <MainWrapper>
     <ExperienceWrapper>
       <WorkWrapper>
         <h1>Internships and Work Experience</h1>
@@ -79,6 +81,7 @@ const Experience = () => (
         </EducationContent>
       </EducationWrapper>
     </ExperienceWrapper>
+</MainWrapper>
   </Layout>
 )
 export default Experience
