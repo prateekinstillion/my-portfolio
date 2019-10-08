@@ -7,7 +7,7 @@ import interests from "../portfolioData/interestData"
 import {
   ExperienceWrapper,
   WorkWrapper,
-  MainWrapper
+  MainWrapper,
   EducationWrapper,
   EducationContent,
   Stepper,
