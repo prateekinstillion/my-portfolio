@@ -5,28 +5,13 @@ import styled from "styled-components"
 import { siteMeta } from "../portfolioData/seoData"
 import Helmet from "react-helmet"
 import favicon from "../assets/images/prateek.jpg"
-import backgroundWrapper from "../assets/images/background2.jpg"
+import primaryBackgroundWrapper from "../assets/images/background2.jpg"
+import secondaryBackgroundWrapper from "../assets/images/background.jpg"
 import { Location } from "@reach/router"
 
 import "./index.css"
 import Header from "../components/Header/header"
 import Footer from "../components/Footer/footer"
-
-const Wrapper = styled.div`
-  background-image: url(${backgroundWrapper});
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  height: auto;
-  background-position: bottom;
-  padding: 5% 8%;
-  position: relative;
-  @media (max-width: 700px) {
-    min-height: 100vh;
-    height: auto;
-  }
-`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -54,10 +39,25 @@ const Layout = ({ children }) => (
           ]}
         />
         <Location>
-          {({ location }) => {
+          {({ location }) => {                
+            const Wrapper = styled.div`
+              background-image: url(${location.pathname === '/' || location.pathname === '/contact' ? primaryBackgroundWrapper: secondaryBackgroundWrapper});
+              width: 100%;
+              background-repeat: no-repeat;
+              background-size: cover;
+              min-height: 100vh;
+              height: auto;
+              background-position: bottom;
+              padding: 5% 8%;
+              position: relative;
+              @media (max-width: 700px) {
+                min-height: 100vh;
+                height: auto;
+              }
+            `
             return (
               <Wrapper
-                className={location.pathname === '/' || location.pathname === '/contact' ? "cutBackground": ""}
+                className="cutBackground"
               >
                 <Header />
                 {children}
