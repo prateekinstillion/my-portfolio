@@ -6,7 +6,9 @@ import { siteMeta } from "../portfolioData/seoData"
 import Helmet from "react-helmet"
 import favicon from "../assets/images/prateek.jpg"
 import primaryBackgroundWrapper from "../assets/images/background2.jpg"
-import secondaryBackgroundWrapper from "../assets/images/background.jpg"
+// import secondaryBackgroundWrapper from "../assets/images/background.jpg"
+import tertiaryBackgroundWrapper from '../assets/images/background3.jpg"
+import quadraticBackgroundWrapper from '../assets/images/background4.jpg"
 import { Location } from "@reach/router"
 
 import "./index.css"
@@ -39,9 +41,24 @@ const Layout = ({ children }) => (
           ]}
         />
         <Location>
-          {({ location }) => {                
+          {({ location }) => {            
+             // Switch to check for the location pathname and based on which set the bacckground wrapper
+            switch(location.pathname) { 
+                case '/':
+                case '/contact':
+                   wrapper = primaryBackgroundWrapper;
+                   break;
+                case '/experience': 
+                   wrapper = tertiaryBackgroundWrapper;
+                   break;
+                case '/projects': 
+                   wrapper = quadraticBackgroundWrapper;
+                   break;
+                default:
+                   wrapper = secondaryBackgroundWrapper;
+               }
             const Wrapper = styled.div`
-              background-image: url(${location.pathname === '/' || location.pathname === '/contact' ? primaryBackgroundWrapper: secondaryBackgroundWrapper});
+              background-image: url(${wrapper});
               width: 100%;
               background-repeat: no-repeat;
               background-size: cover;
