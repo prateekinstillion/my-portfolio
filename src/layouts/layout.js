@@ -43,6 +43,7 @@ const Layout = ({ children }) => (
         <Location>
           {({ location }) => {            
              // Switch to check for the location pathname and based on which set the bacckground wrapper
+            let wrapper = secondaryBackgroundWrapper;
             switch(location.pathname) { 
                 case '/':
                 case '/contact':
