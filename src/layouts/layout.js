@@ -57,7 +57,7 @@ const Layout = ({ children }) => (
           {({ location }) => {
             return (
               <Wrapper
-                className={location.pathname === "/" ? "cutBackground" : ""}
+                className="cutBackground"
               >
                 <Header />
                 {children}
